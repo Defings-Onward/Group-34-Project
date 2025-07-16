@@ -23,16 +23,17 @@ def compute_activity(activity_leve):
 factor = compute_activity(activity_level)
 
 def compute_bmr(sex, w,h,a):
+    h_cm = h * 100
     if sex == 1:
         #BMR=10×weight (kg)+6.25×height (cm)−5×age (years)+5
-        h_cm = h * 100
+        
         bmr =  10 * w + 6.25 * h_cm - 5 * a + 5
     else:
         #BMR=10×weight (kg)+6.25×height (cm)−5×age (years)−161
         bmr = 10 * w + 6.25 * h_cm - 5 * a - 161
     return bmr
 bmr = compute_bmr(sex, weight, height, age)
-tdee = bmr * factor
+tdee = lambda: bmr * factor if factor else 0
 
 def compute_bmi(h, w):
     bmi = w/(h**2)
@@ -45,8 +46,8 @@ def compute_body_fat_percentage(bmi, s, a):
 
 bmi = compute_bmi(height, weight)
 bfp = compute_body_fat_percentage(bmi, sex, age)
-print("Your BMI is: ", bmi)
-print("Your Body Fat Percentage is: ", bfp)
+print(f"Your BMI is:  {bmi:.2f}")
+print(f"Your Body Fat Percentage is: {bfp:.2f}")
 print(f"Basal Metabolic Rate (BMR): {bmr:.2f} kcal/day")
-print(f"Total Daily Energy Expenditure (TDEE): {tdee:.2f} kcal/day")
+print(f"Total Daily Energy Expenditure (TDEE): {tdee():.2f} kcal/day")
 
