@@ -1,0 +1,24 @@
+BIOMETRIC DATA CALCULATOR AND HEALTH ANALYZER
+
+Name: Mary
+Weight: 60.0
+Height: 1.8
+Age: 18.0
+Sex: female
+
+BMI: 18.52
+Body Fat: 20.96
+Basal Metabolic Rate (BMR): 1474.00 kcal/day
+Total Daily Energy Expenditure (TDEE): 2284.70 kcal/day
+Net Calories Today: 556.17 kcal
+You worked out 4 day(s) this week.
+Total exercise time: 210 minutes
+Total calories burned: 1623.83 kcal
+
+Trend Analysis
+
+Workout days: 5 to 4 (-1)
+Calories Gained: 1810.00 to 2180.00 (+370.00 kcal)
+Calories Burned: 1767.15 to 1623.83 (-143.32 kcal)
+BMI: 20.761245674740486 to 18.51851851851852 (-2.24)
+Body Fat %: 13.543494809688584 to 20.962222222222223 (+7.42%)

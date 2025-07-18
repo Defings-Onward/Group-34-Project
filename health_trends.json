@@ -1,0 +1,38 @@
+[
+    {
+        "week": 1,
+        "workout_days": 5,
+        "calories_gained": 1610.0,
+        "calories_burned": 1638.0,
+        "bmi": 22.03856749311295,
+        "body_fat_pct": 14.386280991735537,
+        "tdee": 2396.6875
+    },
+    {
+        "week": 2,
+        "workout_days": 5,
+        "calories_gained": 1650.0,
+        "calories_burned": 2469.6000000000004,
+        "bmi": 22.03856749311295,
+        "body_fat_pct": 14.386280991735537,
+        "tdee": 2396.6875
+    },
+    {
+        "week": 3,
+        "workout_days": 5,
+        "calories_gained": 1810.0,
+        "calories_burned": 1767.15,
+        "bmi": 20.761245674740486,
+        "body_fat_pct": 13.543494809688584,
+        "tdee": 2421.875
+    },
+    {
+        "week": 4,
+        "workout_days": 4,
+        "calories_gained": 2180.0,
+        "calories_burned": 1623.8250000000003,
+        "bmi": 18.51851851851852,
+        "body_fat_pct": 20.962222222222223,
+        "tdee": 2284.7000000000003
+    }
+]
