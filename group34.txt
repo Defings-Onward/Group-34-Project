@@ -1,8 +1,5 @@
 import json
 import os
-import datetime
-import math
-import csv
 # Biometric Data Calculator and Health Analyzer 
 # Create a health data processing tool that calculates BMI, 
 # body fat percentage, and metabolic rates from input measurements, 
@@ -151,7 +148,7 @@ bmr = compute_bmr(sex, weight, height, age)
 tdee = lambda: bmr * factor if factor else 0
 
 def compute_bmi(h, w):
-    bmi = w/(math.pow(h, 2))
+    bmi = w/(h**2)
     return bmi
 
 def compute_body_fat_percentage(bmi, s, a):
@@ -216,7 +213,6 @@ weekly_summary = {
     "bmi": bmi,
     "body_fat_pct": bfp,
     "tdee": tdee(),
-    "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
 }
 health_trends.append(weekly_summary)
 
@@ -243,94 +239,53 @@ analyze_trend(health_trends)
 
 def generate_health_report(bmi, bfp, cal_gained, cal_burned, water_gram, workout_days):
     print("\nHealth Assessment Report")
-    with open("health_report.txt", "a") as f:
-            f.write(f"\nHealth Assessment Report")
     net_calories =  cal_gained - cal_burned
     # --- BMI Status
     if bmi < 18.5:
         print("• BMI Status: Underweight – Consider increasing calorie intake and strength training.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• BMI Status: Underweight – Consider increasing calorie intake and strength training.")
     elif 18.5 <= bmi <= 24.9:
         print("• BMI Status: Normal – Keep up the good work!")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• BMI Status: Normal – Keep up the good work!")
     elif 25 <= bmi <= 29.9:
         print("• BMI Status: Overweight – Consider reducing daily calories and increasing activity.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• BMI Status: Overweight – Consider reducing daily calories and increasing activity.")
     else:
         print("• BMI Status: Obese – High risk for cardiovascular diseases. Medical advice recommended.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• BMI Status: Obese – High risk for cardiovascular diseases. Medical advice recommended.")
 
     # --- Body Fat %
     if bfp > 32:
         print("• Body Fat: High – Try to reduce fat intake and increase cardio.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Body Fat: High – Try to reduce fat intake and increase cardio.")
     elif bfp < 10:
         print("• Body Fat: Low – Ensure you're getting enough nutrition.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Body Fat: Low – Ensure you're getting enough nutrition.")
     else:
         print("• Body Fat: Within healthy range.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Body Fat: Within healthy range.")
 
     # --- Net Calories
     if net_calories > 500:
         print("• Calorie Balance: High surplus – Possible weight gain risk.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Calorie Balance: High surplus – Possible weight gain risk.")
     elif net_calories < -500:
         print("• Calorie Balance: Large deficit – May cause fatigue or muscle loss.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Calorie Balance: Large deficit – May cause fatigue or muscle loss.")
     else:
         print("• Calorie Balance: Stable – Good for maintaining weight.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Calorie Balance: Stable – Good for maintaining weight.")
 
     # --- Water
     if water_gram < 13500:  # ~1.5L per day for 5 days
         print("• Hydration: Low – Drink more water daily (2–3L recommended).")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Hydration: Low – Drink more water daily (2–3L recommended).")
     else:
         print("• Hydration: Good")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Hydration: Good")
 
     # --- Workout Days
     if workout_days < 3:
         print(f"• Activity: Only {workout_days} day(s) – Try to exercise at least 3–5 times per week.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Activity: Only {workout_days} day(s) – Try to exercise at least 3–5 times per week.")
     else:
         print(f"• Activity: Great! {workout_days} workout days this week.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n• Activity: Great! {workout_days} workout days this week.")
 
-    print("\nPersonalized Recommendations:")
-    with open("health_report.txt", "a") as f:
-        f.write(f"\n\nPersonalized Recommendations:\n")
+    print("\n✅ Personalized Recommendations:")
     if bmi > 25 or bfp > 30:
         print("- Try reducing sugary and fatty foods.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n- Try reducing sugary and fatty foods.")
     if water_gram < 10000:
         print("- Keep a water bottle handy to drink more often.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n- Keep a water bottle handy to drink more often.")
     if workout_days < 3:
         print("- Start with 15-minute walks daily to build consistency.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n- Start with 15-minute walks daily to build consistency.")
     if net_calories < 0:
         print("- Eat more whole grains and lean proteins to stay energized.")
-        with open("health_report.txt", "a") as f:
-            f.write(f"\n- Eat more whole grains and lean proteins to stay energized.")
-    
 
 generate_health_report(bmi, bfp, cal_gained, cal_burned, water_gram, workout_days)

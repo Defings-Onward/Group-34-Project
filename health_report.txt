@@ -1,24 +1,32 @@
 BIOMETRIC DATA CALCULATOR AND HEALTH ANALYZER
 
-Name: Mary
+Name: Obanijesu
 Weight: 60.0
-Height: 1.8
+Height: 1.65
 Age: 18.0
 Sex: female
 
-BMI: 18.52
-Body Fat: 20.96
-Basal Metabolic Rate (BMR): 1474.00 kcal/day
-Total Daily Energy Expenditure (TDEE): 2284.70 kcal/day
-Net Calories Today: 556.17 kcal
+BMI: 22.04
+Body Fat: 25.19
+Basal Metabolic Rate (BMR): 1380.25 kcal/day
+Total Daily Energy Expenditure (TDEE): 2139.39 kcal/day
+Net Calories Today: 726.47 kcal
 You worked out 4 day(s) this week.
-Total exercise time: 210 minutes
-Total calories burned: 1623.83 kcal
+Total exercise time: 190 minutes
+Total calories burned: 1323.53 kcal
 
 Trend Analysis
 
 Workout days: 5 to 4 (-1)
-Calories Gained: 1810.00 to 2180.00 (+370.00 kcal)
-Calories Burned: 1767.15 to 1623.83 (-143.32 kcal)
-BMI: 20.761245674740486 to 18.51851851851852 (-2.24)
-Body Fat %: 13.543494809688584 to 20.962222222222223 (+7.42%)
+Calories Gained: 2900.00 to 2050.00 (-850.00 kcal)
+Calories Burned: 1622.25 to 1323.53 (-298.72 kcal)
+BMI: 22.03856749311295 to 22.03856749311295 (+0.00)
+Body Fat %: 14.386280991735537 to 25.186280991735536 (+10.80%)
+Health Assessment Report
+• BMI Status: Normal – Keep up the good work!
+• Body Fat: Within healthy range.
+• Calorie Balance: High surplus – Possible weight gain risk.
+• Hydration: Good
+• Activity: Great! 4 workout days this week.
+
+Personalized Recommendations:
